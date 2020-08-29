@@ -12,15 +12,15 @@
 <body>
     <nav>
         <div class="ui pointing menu">
-            <a class="item">
-              Home
-            </a>
-            <a class="item">
+            <a class="item" href="/messages">
               Messages
             </a>
-            <a class="item">
-              Friends
+            <a class="item" href="/chatroom">
+              Chatroom
             </a>
+            <a class="item" href="/users/profile">
+                profile
+              </a>
             <div class="right menu">
                 <% if (user) { %>
                     <a class="ui item" href="/auth/logout">Log Out</a>

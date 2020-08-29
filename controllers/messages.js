@@ -24,7 +24,7 @@ function show(req, res) {
   Message.findById(req.params.id)
   .then((message) => {
     res.render('messages/show', {
-      title: 'Message Deets',
+      title: 'Message Details',
       user: req.user,
       message
     })

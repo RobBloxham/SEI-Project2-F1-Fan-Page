@@ -1,11 +1,15 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema
 
 
-var userSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
   name: String,
   email: String,
   avatar: String,
-  googleId: String
+  googleId: String,
+  bio: String,
+  favoriteDriver: [{ type: Schema.Types.ObjectId, ref: 'Driver'}],
+  favoriteTeam: [ {type: Schema.Types.ObjectId, ref: 'Team'}],
 }, {
   timestamps: true
 });

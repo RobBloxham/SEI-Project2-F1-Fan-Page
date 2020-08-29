@@ -3,9 +3,6 @@ const io = require('socket.io')()
 let chatters = {}
 
 io.on('connection', (socket) => {
-  // This is where all of our server-side socket.io functionality will exist.  
-
-    // When anyone 'enters the room (loads the page)', add them to the list and play a sound
   socket.on('register-user', (username)=> {
     chatters[socket.id] = username
     io.emit('update-chatter-list', Object.keys(chatters).map(id => chatters[id]))

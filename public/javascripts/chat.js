@@ -1,4 +1,6 @@
-// define socket as the io exported on our server
+const io = require("../../io");
+
+
 let socket = io()
 
 
