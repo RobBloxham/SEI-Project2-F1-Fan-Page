@@ -1,5 +1,18 @@
-<%- include('partials/header') %>
+<%- include('../partials/header') %>
 
-<h1>I am a show profile page</h1>
+<h3><%= title %></h3>
 
-<%- include('partials/footer') %>
+<div class="card" style="width: 18rem;">
+  <!-- If our user doesn't have an avatar image, let's use a silly cat picture! -->
+  <img id="avatarPhoto" style="height: 18rem;" class="card-img-top" src="<%= userInfo.avatar ? userInfo.avatar : 'http://theoldreader.com/kittens/300/300/'  %>" alt="Card image cap">
+  <div class="card-header">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= userInfo.name %></h5>
+    <!-- Let's clean up the date data to show the day the user joined -->
+    <p class="card-text">Joined: <%= userInfo.createdAt.toLocaleString() %></p>
+    <p class="card-text">Email: <a href="mailto:<%= userInfo.email %>"><%= userInfo.email %></a></p>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>

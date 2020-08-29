@@ -1,6 +1,7 @@
 const User = require('../models/user');
 const Driver = require('../models/driver');
 const Team = require('../models/team')
+const user = require('../models/user');
 
 module.exports = {
   index,
@@ -26,17 +27,12 @@ function show(req, res) {
     res.render('users/show', {
       title: 'User',
       userInfo,
-      user: req.user,
+      user: req.user
     })
   })
 }
 
 function showProfile(req, res) {
-  // Let's talk about why we're using User.findById.
-  // Ordinarily, you won't see this, as we have access
-  // to the user via req.user.  Because we're going to 
-  // use .populate later on to find "friends," we're 
-  // going to stub it up like this in advance.
   User.findById(req.user._id).then((user) => {
       res.render('users/profile', { title: 'Profile Page', user})
     }

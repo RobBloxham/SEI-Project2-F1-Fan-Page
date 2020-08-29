@@ -1,9 +1,7 @@
-const io = require("../../io");
-
-
+// First, we need to define our socket as the io we've exported on our server
 let socket = io()
 
-
+// OMG, CACHED ELEMENT REFERENCES?!?!? NO WAI!!!!
 let message = document.getElementById("message");
 let username = document.getElementById("username");
 let send_message = document.getElementById("send_message");
@@ -12,7 +10,7 @@ let avatar = document.getElementById("avatar");
 let isTyping = document.getElementById("isTyping");
 let chatters = document.getElementById("chatters");
 
-
+// Event listeners (No, you're not having a flashback.  Everything will be ok!)
 
   
   // When 'send message' is clicked, emit a message containing the chat info to the server
