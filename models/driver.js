@@ -10,6 +10,7 @@ const driverSchema = new Schema({
     id: String,
     name: String,
     driverId: String,
+    team: String,
     nationality: String,
     height: String,
     weight: String,

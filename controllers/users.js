@@ -1,7 +1,7 @@
 const User = require('../models/user');
 const Driver = require('../models/driver');
 const Team = require('../models/team')
-const user = require('../models/user');
+
 
 module.exports = {
   index,

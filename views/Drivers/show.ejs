@@ -1,18 +1,16 @@
-<%- include('../partials/header') %>
+<%- include('../../partials/header) %>
 
-<h3><%= title %></h3>
-<h4><%= message.title %></h4>
-<h5>Posted on <%= message.createdAt.toLocaleString() %> - <%= message.postedBy %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt=""></h5>
+    <% drivers.forEach(driver => { %>
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= driver.givenName %> <%= driver.familyName %>  </h5>
+          <p class="card-text">Number: <%= driver.permanentNumber %></p>
+          <p class="card-text">Date of Birth: <%= driver.dateOfBirth %></p>
+          <p class="card-text">Nationality: <%= driver.nationality %></p>
+          <p class="card-text">Url: <%= driver.url %></p>>
+        </div>
+      </div>
+    <% }) %>
 
-<% message.replies.forEach(reply => { %>
-    <h6><%= reply.message %> - <%= reply.postedBy %> <img id="avatarPhoto" width="25" src="<%= reply.avatar %>" alt=""></h6>
-<% }) %>
 
-<form action="/messages/<%= message._id %>" method="POST">
-  <div class="form-group">
-    <input type="text" class="form-control" aria-describedby="message" name="message" placeholder="Enter reply...">
-  </div>
-  <button type="submit" class="btn btn-primary">Reply</button>
-</form>
-
-<%- include('../partials/footer') %>
+<%- include('../../partials/footer') %>

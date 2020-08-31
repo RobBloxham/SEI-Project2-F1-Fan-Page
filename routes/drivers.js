@@ -2,7 +2,8 @@ const router = require('express').Router()
 const driversCtrl = require('../controllers/drivers')
 
 router.get('/', isLoggedIn, driversCtrl.index)
-router.get('/new', driversCtrl.new)
+// router.get('/new', driversCtrl.new)
+// router.get('/show', isLoggedIn, driversCtrl.show)
 
 
 function isLoggedIn(req, res, next) {
