@@ -12,21 +12,27 @@
     <nav>
         <div class="ui pointing menu">
             <a class="item" href="/messages">
-              Messages
+            Messages
             </a>
             <a class="item" href="/chatroom">
               Chatroom
             </a>
-            <a class="item" href="/Users">
+            <a class="item" href="/users">
                 Users
-              </a>
-              <div class="right menu">
+            </a>
+            <a class="item" href="/drivers">
+                Drivers
+            </a>
+            <a class="item" href="/teams">
+                Teams
+            </a>
+            <div class="right menu">
                 <% if (user) { %>
                     <img id="avatarPhoto" height="50" src="<%= user.avatar %>" alt="">
                     <a class="ui item" href="/auth/logout">Log Out</a>
-                  <% } else { %>
+                <% } else { %>
                     <a class="ui item" href="/auth/google">Login with Google</a>
-                  <% } %>
-                </div>
-              </div>
+                <% } %>
+            </div>
+        </div>
     </nav>

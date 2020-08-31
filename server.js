@@ -24,6 +24,7 @@ const authRouter = require('./routes/auth');
 const messagesRouter = require('./routes/messages');
 const chatRouter = require('./routes/chat');
 const driversRouter = require('./routes/drivers')
+const teamsRouter = require('./routes/teams')
 const landingPageRouter = require('./routes/landingpage')
 
 // view engine setup
@@ -52,6 +53,7 @@ app.use('/', landingPageRouter)
 app.use('/messages', messagesRouter);
 app.use('/chatroom', chatRouter);
 app.use('/drivers', driversRouter)
+app.use('/teams', teamsRouter)
 
 // invalid request, send 404 page
 app.use(function(req, res, next) {

@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+<br><br>
+<div class="ui cards">
+    <% teams.forEach(team => { %>
+    <div class="card">
+        <div class="content">
+            <div class="header"><%= team.name %></div>
+            <div class="description">
+                <p>Team Country: <%= team.nationality %></p>
+            </div>
+            </div>
+    </div>
+    <% }) %>
+</div>
+
+<%- include('../partials/footer') %>

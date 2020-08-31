@@ -1,16 +1,4 @@
 <%- include('../../partials/header) %>
 
-    <% drivers.forEach(driver => { %>
-      <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title"><%= driver.givenName %> <%= driver.familyName %>  </h5>
-          <p class="card-text">Number: <%= driver.permanentNumber %></p>
-          <p class="card-text">Date of Birth: <%= driver.dateOfBirth %></p>
-          <p class="card-text">Nationality: <%= driver.nationality %></p>
-          <p class="card-text">Url: <%= driver.url %></p>>
-        </div>
-      </div>
-    <% }) %>
-
 
 <%- include('../../partials/footer') %>

@@ -1,8 +1,7 @@
 const router = require('express').Router()
-const driversCtrl = require('../controllers/drivers')
+const teamsCtrl = require('../controllers/teams')
 
-router.get('/', isLoggedIn, driversCtrl.index)
-router.post('/:id', isLoggedIn, driversCtrl.create)
+router.get('/', isLoggedIn, teamsCtrl.index)
 // router.get('/new', driversCtrl.new)
 // router.get('/show', isLoggedIn, driversCtrl.show)
 
