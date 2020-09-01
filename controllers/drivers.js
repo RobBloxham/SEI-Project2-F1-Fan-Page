@@ -6,7 +6,26 @@ const axios = require('axios')
 module.exports = {
     index,
     create,
-    show
+    show,
+    addToFavoriteDriver,
+    removeFromFavoriteDriver
+}
+
+function addToFavoriteDriver(req, res){
+    req.user.favoriteDriver.push(req.params.id)
+    req.user.save().then( () => {
+    res.redirect(`/drivers/${req.params.id}`)
+    })
+    .catch(err => console.log(err))
+}
+
+function removeFromFavoriteDriver(req, res) {
+    let idx = req.user.favoriteDriver.findIndex((drivers) => drivers.id === req.params.id)
+    req.user.favoriteDriver.splice(idx, 1)
+    req.user.save().then( () => {
+      res.redirect(`/drivers/${req.params.id}`)
+    })
+    .catch(err => console.log(err))
 }
 
 function show(req, res) {

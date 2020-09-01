@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
   googleId: String,
   bio: String,
   favoriteDriver: [{ type: Schema.Types.ObjectId, ref: 'Driver'}],
-  favoriteTeam: [ {type: Schema.Types.ObjectId, ref: 'Team'}],
+  favoriteTeam: [{type: Schema.Types.ObjectId, ref: 'Team'}],
 }, {
   timestamps: true
 });

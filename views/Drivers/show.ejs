@@ -1,4 +1,10 @@
 <%- include('../partials/header') %>
+
+<% if (user.favoriteDriver.some(drivers => {return drivers.id === drivers.id})) { %>
+    <form action="/drivers/<%= drivers._id %>?_method=DELETE" method="POST">
+<% } else { %> 
+    <form action="/drivers/<%= drivers._id %>?_method=PUT" method="POST">
+    <% } %>
 <div class="ui cards">
     <div class="card">
         <div class="content">
@@ -13,5 +19,7 @@
         </div>
     </div>
 </div>
+<button><%= user.favoriteDriver.some(drivers => {return drivers.id === drivers.id}) ? "Remove Favorite" : "Favorite" %></button>
+</form>
 
 <%- include('../partials/footer') %>
