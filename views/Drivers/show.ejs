@@ -1,4 +1,17 @@
-<%- include('../../partials/header) %>
+<%- include('../partials/header') %>
+<div class="ui cards">
+    <div class="card">
+        <div class="content">
+            <div class="header"><%= driver.name %></div>
+            <div class="description">
+                <p>Team: <%= driver.team %></p>
+                <p>Nationality: <%= driver.nationality %></p>
+                <p>Height: <%= driver.height %></p>
+                <p>Weight: <%= driver.weight %></p>
+                <p>Debut: <%= driver.debut %></p>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-<%- include('../../partials/footer') %>
+<%- include('../partials/footer') %>

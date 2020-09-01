@@ -5,20 +5,29 @@ const axios = require('axios')
 
 module.exports = {
     index,
-    create
-  }
+    create,
+    show
+}
 
+function show(req, res) {
+    Driver.findById(req.params.id)
+    .then((drivers) => {
+        res.render('drivers/show', {
+        user: req.user,
+        drivers: drivers        
+        })      
+    })
+}
 
 function index(req, res) {
-    axios
-        .get(`https://api.sportradar.us/formula1/trial/v2/en/sport_events/sr:stage:547803/summary.json?api_key=${api_key}`)
-        .then((response) => {
-            res.render('drivers/index', {
-                user: req.user,
-                drivers: response.data.stage.competitors 
-            })
-        })
-        .catch((err) => console.log(err))
+  Driver.find({})
+  .then((drivers) => {
+      res.render("drivers/index", {
+          user: req.user,
+          drivers: drivers
+      })   
+  })
+  .catch((err) => console.log(err))
 }
 
 function create(req, res) {
@@ -28,7 +37,7 @@ function create(req, res) {
             Driver.create({
             "name": response.data.competitor.name,
             "driverId": response.data.competitor.id,
-            "team": response.data.teams.name,
+            "team": response.data.teams[0].name,
             "nationality": response.data.competitor.nationality,
             "height": response.data.info.height,
             "weight": response.data.info.weight,
