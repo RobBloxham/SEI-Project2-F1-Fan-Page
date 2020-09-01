@@ -2,13 +2,13 @@
 <div class="ui cards">
     <div class="card">
         <div class="content">
-            <div class="header"><%= driver.name %></div>
+            <div class="header"><%= drivers.name %></div>
             <div class="description">
-                <p>Team: <%= driver.team %></p>
-                <p>Nationality: <%= driver.nationality %></p>
-                <p>Height: <%= driver.height %></p>
-                <p>Weight: <%= driver.weight %></p>
-                <p>Debut: <%= driver.debut %></p>
+                <p>Team: <%= drivers.team %></p>
+                <p>Country: <%= drivers.nationality %></p>
+                <p>Height: <%= drivers.height %>cm</p>
+                <p>Weight: <%= drivers.weight %>kg</p>
+                <p>Debut: <%= drivers.debut.toLocaleString().split(',')[0] %></p>
             </div>
         </div>
     </div>
