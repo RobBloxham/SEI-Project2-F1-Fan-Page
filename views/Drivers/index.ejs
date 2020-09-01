@@ -1,16 +1,18 @@
 <%- include('../partials/header') %>
 <br><br>
-
+<div class="ui cards" id="cards">
     <% drivers.forEach(driver => { %>
-    <a class="ui card" href="drivers/<%= driver._id %> ">
-        <div class="content">
-            <div class="header"><%= driver.name %></div>
-            <div class="description">
+        <div class="card">
+            <div class="content">
+                <div class="header"><%= driver.name %></div>
+                <div class="description">
                 <p>Team: <%= driver.team %></p>
+                <a href="drivers/<%= driver._id %>">More about <%= driver.name %> </a>
+                </div>
             </div>
         </div>
-    </a>
     <% }) %>
+</div>
 
 
 <%- include('../partials/footer') %>

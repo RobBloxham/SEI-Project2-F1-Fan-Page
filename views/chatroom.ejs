@@ -1,19 +1,23 @@
 <%- include('partials/header') %>
-<h3><%= title %></h3>
-<p>Users in the room:</p>
-
-<ul id="chatters"></ul>
-<input type="text" id="avatar" hidden name="avatar" value="<%= user.avatar %>">
-<input type="text" hidden name="username" value="<%= user.name %>" id="username">
-<input type="text" id="message">
-<a class="btn btn-info" href="#" id="send_message">Send Message</a>
-
-<p id="isTyping"></p>
-<div id="chatroom"></div>
-
-<% chats.forEach(c => { %>
-  <p><img id="avatarPhoto" height="30" src="<%= c.avatar %>" alt=""> <%= c.username %>: <%= c.message %> - (<%= c.createdAt.toLocaleString() %>)</p>
-<% }) %> 
+<div class="chatroom">
+    <h3><%= title %></h3>
+    <p>Users in the room:</p>
+    <ul id="chatters"></ul>
+    <input type="text" id="avatar" hidden name="avatar" value="<%= user.avatar %>">
+    <input type="text" hidden name="username" value="<%= user.name %>" id="username">
+    <div class="ui action input" data-children-count="1">
+        <input type="text" id="message" value="enter a chat message">
+        <button class="ui teal right labeled icon button" href="#" id="send_message">
+        <i class="wechat icon"></i>
+        send
+        </button>
+    </div>
+    <p id="isTyping"></p>
+    <div id="chatroom"></div>
+    <% chats.forEach(c => { %>
+    <p id="chats"><img id="avatarPhoto" height="30" src="<%= c.avatar %>" alt=""> <%= c.username %>: <%= c.message %> - (<%= c.createdAt.toLocaleString() %>)</p>
+    <% }) %> 
+</div>
 
 <script src="javascripts/chat.js"></script>
 
