@@ -5,20 +5,31 @@ const axios = require('axios')
 
 module.exports = {
     index,
-    create
-  }
+    create,
+    show
+}
 
-
-
-  function index(req, res) {
-    Team.find({})
+function show(req, res) {
+    Team.findById(req.params.id)
     .then((teams) => {
-        res.render("teams/index", {
-            user: req.user,
-            teams
-        })   
+        res.render('teams/show', {
+        user: req.user,
+        teams: teams       
+        })      
     })
-    .catch((err) => console.log(err))
+}
+
+
+
+function index(req, res) {
+  Team.find({})
+  .then((teams) => {
+      res.render("teams/index", {
+          user: req.user,
+          teams
+      })   
+  })
+  .catch((err) => console.log(err))
 }
 
 function create(req, res) {

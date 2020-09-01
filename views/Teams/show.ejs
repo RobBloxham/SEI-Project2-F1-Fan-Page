@@ -1,16 +1,20 @@
 <%- include('../partials/header') %>
-<br><br>
+
 <div class="ui cards">
-    <% drivers.forEach(driver => { %>
     <div class="card">
         <div class="content">
-            <div class="header"><%= driver.name %></div>
+            <div class="header"><%= teams.name %></div>
             <div class="description">
-                <p>Team: <%= driver.team.name %></p>
+                <p>Location: <%= teams.location %></p>
+                <p>Official website: <a href="<%= teams.url_official %>"> <%= teams.url_official %>  </a></p>
+                <p>Founded in: <%= teams.foundation_year %></p>
+                <p>Car name: <%= teams.car_name %></p>
+                <p>President: <%= teams.president %></p>
+                <p>Sports Director: <%= teams.sports_director %></p>
+                <p>Technical Director: <%= teams.technical_director %></p>
             </div>
-            </div>
+        </div>
     </div>
-    <% }) %>
 </div>
 
 <%- include('../partials/footer') %>
