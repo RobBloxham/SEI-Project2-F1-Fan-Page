@@ -13,8 +13,10 @@
   <div class="description">
     <p class="card-text">Joined: <%= userInfo.createdAt.toLocaleString() %></p>
     <p class="card-text">Email: <a href="mailto:<%= userInfo.email %>"><%= userInfo.email %></a></p>
-    <p class="card-text">Bio: <%= user.bio %></p> 
-    <p class="card-text">Favorite Driver: <%= user.favoriteDriver %></p> 
+    <p class="card-text">Bio: <%= user.bio %></p>
+    <% user.favoriteDriver.forEach(d => { %> 
+    <p class="card-text">Favorite Driver:<a href="/drivers/<%= d._id %>"></a> <%= d.name %></a>
+    <% }) %> 
     <p class="card-text">Favorite Team: <%= user.favoriteTeam %></p> 
     <p class="card-text">Favorite Track: <%= user.favoriteTrack %></p> 
     <p class="card-text">About Favorite Track: <%= user.aboutFavoriteTrack %></p> 

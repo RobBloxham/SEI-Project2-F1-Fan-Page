@@ -27,7 +27,7 @@ function show(req, res) {
   .populate("favoriteDriver")
   .then((userInfo) => {
     res.render('users/show', {
-      title: 'User',
+      title: 'User Details',
       userInfo,
       user: req.user
     })
@@ -35,7 +35,7 @@ function show(req, res) {
 }
 
 function showProfile(req, res) {
-  User.findById(req.user._id).then((user) => {
+  User.findById(req.user._id).populate('favoriteDriver').then((user) => {
       res.render('users/profile', { title: 'Profile Page', user})
     }
   )

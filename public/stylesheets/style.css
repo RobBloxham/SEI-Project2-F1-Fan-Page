@@ -1,5 +1,6 @@
 #cards {
-  padding-left: 50px;
+  justify-content: center;
+  text-align: center; 
 }
 #cards1 {
   padding-top: 100px;
@@ -8,6 +9,7 @@
 }
 .chatroom{
   padding-left: 50px;
+  padding-top: 50px;
 }
 #chats{
   font-size: 16px;
