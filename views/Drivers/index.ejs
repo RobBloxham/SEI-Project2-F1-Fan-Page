@@ -1,18 +1,15 @@
 <%- include('../partials/header') %>
 <br><br>
-<div class="ui cards">
+<div class="ui cards" href="team/<%= driver.id %> ">
     <% drivers.forEach(driver => { %>
-    <form action="/drivers/<%= driver.id %>" method="POST">
     <div class="card">
         <div class="content">
             <div class="header"><%= driver.name %></div>
             <div class="description">
                 <p>Team: <%= driver.team.name %></p>
-                <p>Driver ID: <%= driver.id %> </p>
             </div>
             </div>
     </div>
-    <button type="submit">Add Driver</button>
     <% }) %>
 </div>
 

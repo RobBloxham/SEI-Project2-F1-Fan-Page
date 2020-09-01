@@ -6,6 +6,7 @@ const teamSchema = new Schema({
     name: String,
     url_official: String,
     foundation_year: String,
+    location: String,
     car_name: String,
     president: String,
     sports_director: String,
