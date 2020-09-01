@@ -17,9 +17,11 @@
                 <p>Debut: <%= drivers.debut.toLocaleString().split(',')[0] %></p>
             </div>
         </div>
+        <div class="extra content">
+        <button class="ui button"><%= user.favoriteDriver.some(drivers => {return drivers.id === drivers.id}) ? "Remove Favorite" : "Favorite" %></button>
+        </div>
     </div>
 </div>
-<button><%= user.favoriteDriver.some(drivers => {return drivers.id === drivers.id}) ? "Remove Favorite" : "Favorite" %></button>
 </form>
 
 <%- include('../partials/footer') %>

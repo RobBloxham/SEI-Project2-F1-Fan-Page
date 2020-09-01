@@ -10,6 +10,8 @@ const userSchema = new mongoose.Schema({
   bio: String,
   favoriteDriver: [{ type: Schema.Types.ObjectId, ref: 'Driver'}],
   favoriteTeam: [{type: Schema.Types.ObjectId, ref: 'Team'}],
+  favoriteTrack: [],
+  aboutFavoriteTrack: String,
 }, {
   timestamps: true
 });

@@ -2,20 +2,22 @@
 
 <h3><%= title %></h3>
 
-<div class="card" style="width: 18rem;">
-  <!-- If our user doesn't have an avatar image, let's use a silly cat picture! -->
+<div class="ui card">
+    <div class="image">
   <img id="avatarPhoto" style="height: 18rem;" class="card-img-top" src="<%= userInfo.avatar ? userInfo.avatar : 'http://theoldreader.com/kittens/300/300/'  %>" alt="Card image cap">
-  <div class="card-header">
+</div>
+<div class="content">
+  <div class="header">
+    <%= userInfo.name %>
   </div>
-  <div class="card-body">
-    <h5 class="card-title"><%= userInfo.name %></h5>
-    <!-- Let's clean up the date data to show the day the user joined -->
+  <div class="description">
     <p class="card-text">Joined: <%= userInfo.createdAt.toLocaleString() %></p>
     <p class="card-text">Email: <a href="mailto:<%= userInfo.email %>"><%= userInfo.email %></a></p>
-    <p class="card-text">Favorite Driver:</p>
- 
-  </div>
-</div>
+    <p class="card-text">Bio: <%= user.bio %></p> 
+    <p class="card-text">Favorite Driver: <%= user.favoriteDriver %></p> 
+    <p class="card-text">Favorite Team: <%= user.favoriteTeam %></p> 
+    <p class="card-text">Favorite Track: <%= user.favoriteTrack %></p> 
+    <p class="card-text">About Favorite Track: <%= user.aboutFavoriteTrack %></p> 
   </div>
 </div>
 

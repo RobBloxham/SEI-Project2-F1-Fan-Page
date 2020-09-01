@@ -23,7 +23,9 @@ function index(req, res) {
 }
 
 function show(req, res) {
-  User.findById(req.params.id).then((userInfo) => {
+  User.findById(req.params.id)
+  .populate("favoriteDriver")
+  .then((userInfo) => {
     res.render('users/show', {
       title: 'User',
       userInfo,

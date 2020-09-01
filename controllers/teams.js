@@ -6,7 +6,26 @@ const axios = require('axios')
 module.exports = {
     index,
     create,
-    show
+    show,
+    addToFavoriteTeam,
+    removeFromFavoriteTeam
+}
+
+function addToFavoriteTeam(req, res){
+    req.user.favoriteTeam.push(req.params.id)
+    req.user.save().then( () => {
+    res.redirect(`/teams/${req.params.id}`)
+    })
+    .catch(err => console.log(err))
+}
+
+function removeFromFavoriteTeam(req, res) {
+    let idx = req.user.favoriteTeam.findIndex((Teams) => Teams.id === req.params.id)
+    req.user.favoriteTeam.splice(idx, 1)
+    req.user.save().then( () => {
+      res.redirect(`/teams/${req.params.id}`)
+    })
+    .catch(err => console.log(err))
 }
 
 function show(req, res) {

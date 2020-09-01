@@ -4,6 +4,8 @@ const teamsCtrl = require('../controllers/teams')
 router.get('/', isLoggedIn, teamsCtrl.index)
 router.get('/:id', isLoggedIn, teamsCtrl.show)
 router.post('/:id', isLoggedIn, teamsCtrl.create)
+router.put('/:id', isLoggedIn, teamsCtrl.addToFavoriteTeam)
+router.delete('/:id', isLoggedIn, teamsCtrl.removeFromFavoriteTeam)
 
 
 
