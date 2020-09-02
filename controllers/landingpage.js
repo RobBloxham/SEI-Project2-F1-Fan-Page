@@ -1,7 +1,8 @@
-module.exports{
-    
+module.exports = {
+    setTimeout
 }
 
-setTimeout(function() {
-    res.redirect('/users')
-  }, 3000)
+function setTimeout(){
+    setTimeout(7000), 
+    res.redirect('/messages')
+}
