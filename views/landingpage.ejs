@@ -27,17 +27,20 @@
         img {
           width: 50%;
           height: auto;
+          justify-content: center;
+          align-content: center;
+          align-items: center;
+          text-align: center;
         }       
 
       </style>
 </head>
 <body>
+  <br><br><br>
     <h1>F1 FAN PAGE</h1>
-    <img src="/images/LightsOut.gif">
-    <script>
-  setTimeout(function () {
-     window.location = "/messages";
-  }, 7000)
-</script>
+    <button class="ui green button" id="startBtn">Enter Page</button>
+    
+    <img id="lights" src="/images/LightsOut.gif" style="display:none"/>
+    <script src="/javascripts/landingpage.js"></script>
 </body>
 </html>
