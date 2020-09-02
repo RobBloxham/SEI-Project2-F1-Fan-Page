@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const messagesCtrl = require("../controllers/messages");
 
-router.get('/', isLoggedIn, messagesCtrl.index);
+router.get('/',  messagesCtrl.index);
 router.post('/', isLoggedIn, messagesCtrl.create);
 router.get('/:id', isLoggedIn, messagesCtrl.show);
 router.post('/:id', isLoggedIn, messagesCtrl.reply);
