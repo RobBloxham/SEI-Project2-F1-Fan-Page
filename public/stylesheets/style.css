@@ -14,4 +14,17 @@
 #chats{
   font-size: 16px;
 }
+#cards2{
+  padding-top: 100px;
+  justify-content: center;
+  text-align: center; 
+}
+
+#avatarPhoto{
+  padding-right: 5px;
+}
+
+#userstitle{
+  text-align: center;
+}
 

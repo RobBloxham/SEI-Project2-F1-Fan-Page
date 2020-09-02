@@ -5,8 +5,8 @@ const Team = require('../models/team')
 
 module.exports = {
   index,
-  showProfile,
   update,
+  showProfile,
   show,
   getName
 }
@@ -25,18 +25,22 @@ function index(req, res) {
 function show(req, res) {
   User.findById(req.params.id)
   .populate("favoriteDriver")
+  .populate("favoriteTeam")
   .then((userInfo) => {
     res.render('users/show', {
       title: 'User Details',
       userInfo,
-      user: req.user
+      user: req.user,
+      favoriteDriver: userInfo.favoriteDriver,
+      favoriteTeam: userInfo.favoriteTeam
     })
   })
+  .catch((err) => console.log(err))
 }
 
 function showProfile(req, res) {
   User.findById(req.user._id).populate('favoriteDriver').then((user) => {
-      res.render('users/profile', { title: 'Profile Page', user})
+      res.render('users/profile', { title: 'Profile Page', user })
     }
   )
 }

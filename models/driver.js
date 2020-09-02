@@ -1,10 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const driverLookUpSchema = new Schema({
-    driverName: String,
-    driverId: String,
-})
 
 const driverSchema = new Schema({
     id: String,

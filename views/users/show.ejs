@@ -1,26 +1,29 @@
 <%- include('../partials/header') %>
 
-<h3><%= title %></h3>
+<h3 id="userstitle"><%= title %></h3>
 
-<div class="ui card">
+<div class="ui cards" id="cards2">
     <div class="image">
-  <img id="avatarPhoto" style="height: 18rem;" class="card-img-top" src="<%= userInfo.avatar ? userInfo.avatar : 'http://theoldreader.com/kittens/300/300/'  %>" alt="Card image cap">
-</div>
-<div class="content">
-  <div class="header">
+        <img id="avatarPhoto" style="height: 18rem;" class="card-img-top" src="<%= userInfo.avatar ? userInfo.avatar : 'http://theoldreader.com/kittens/300/300/'  %>" alt="Card image cap">
+    </div>
+    <div class="content">
+    <div class="header">
     <%= userInfo.name %>
-  </div>
-  <div class="description">
-    <p class="card-text">Joined: <%= userInfo.createdAt.toLocaleString() %></p>
-    <p class="card-text">Email: <a href="mailto:<%= userInfo.email %>"><%= userInfo.email %></a></p>
-    <p class="card-text">Bio: <%= user.bio %></p>
-    <% user.favoriteDriver.forEach(d => { %> 
-    <p class="card-text">Favorite Driver:<a href="/drivers/<%= d._id %>"></a> <%= d.name %></a>
-    <% }) %> 
-    <p class="card-text">Favorite Team: <%= user.favoriteTeam %></p> 
-    <p class="card-text">Favorite Track: <%= user.favoriteTrack %></p> 
-    <p class="card-text">About Favorite Track: <%= user.aboutFavoriteTrack %></p> 
-  </div>
+    </div>
+    <div class="description">
+        <p class="card-text">Joined: <%= userInfo.createdAt.toLocaleString() %></p>
+        <p class="card-text">Email: <a href="mailto:<%= userInfo.email %>"><%= userInfo.email %></a></p>
+        <p class="card-text">Bio: <%= user.bio %></p>
+        <% favoriteDriver.forEach(d => { %> 
+        <p class="card-text">Favorite Driver: <a href="/drivers/<%= d._id %>"><%= d.name %></a>
+        <% }) %> 
+        <% favoriteTeam.forEach(t => { %> 
+        <p class="card-text">Favorite Team: <a href="/teams/<%= t._id %>"><%= t.name %></a> 
+        <% }) %> 
+        <p class="card-text">Favorite Track: <%= user.favoriteTrack %></p> 
+        <p class="card-text">About Favorite Track: <%= user.aboutFavoriteTrack %></p> 
+    </div>
+    </div>
 </div>
 
 <%- include('../partials/footer') %>
