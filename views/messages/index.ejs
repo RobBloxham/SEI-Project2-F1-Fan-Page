@@ -1,24 +1,29 @@
 <%- include('../partials/header') %>
 
-<h3>Message Board</h3>
+<h3 id="userstitle">Message Board</h3>
+<div class="ui segment" id="cards3">
 <form action="/messages" method="POST">
   <div class="form-group">
-    <input type="text" class="form-control" aria-describedby="message" name="title" placeholder="Enter message...">
+    <textarea rows="5" cols="50" name="title" placeholder="Create a post..."></textarea>
   </div>
-  <button type="submit" class="btn btn-success">Create Post</button>
+  <button type="submit" class="ui green button">Submit Post</button>
 </form>
+</div>
 
 <% messages.forEach(message => { %>
-  <div class="card">
-    <div class="card-header">
-      <%= message.postedBy %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt="">
-    </div>
-    <div class="card-body">
+  <div class="ui relaxed divided list" id="cards3">
+    <div class="item">
+      <div class="content">
+      <p class="header"><%= message.postedBy %></p>
       <h5 class="card-title"><%= message.title %></h5>
-      <h6><%= message.createdAt.toLocaleString()%></h6>
-      <a href="/messages/<%= message._id %>" class="btn btn-primary">See Post</a>
+      <div class="description"><%= message.createdAt.toLocaleString()%></div>
+      </div>
+      <br>
+      <a href="/messages/<%= message._id %>" class="mini ui blue button">See Post & Replies</a>
     </div>
   </div>
+  <div class="ui divider"></div>
+
 <% }) %>
 
 <%- include('../partials/footer') %>

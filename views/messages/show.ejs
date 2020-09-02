@@ -7,8 +7,18 @@
 <h5>Posted on <%= message.createdAt.toLocaleString() %> - <%= message.postedBy %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt=""></h5>
 </div>
 <% message.replies.forEach(reply => { %>
-    <p><%= reply.message %> - <%= reply.postedBy %> <img id="avatarPhoto" width="25" src="<%= reply.avatar %>" alt=""></p>
+  <div class="ui comments">
+    <div class="comment">
+      <a class="avatar">
+        <img src="<%= reply.avatar %>">
+      </a>
+      <div class="content">
+        <p class="author"><%= reply.postedBy %></p>
+        <p><%= reply.message %></p>
+      </div>
+    </div>
   </div>
+
 <% }) %>
 
 <form action="/messages/<%= message._id %>" method="POST">
@@ -20,5 +30,7 @@
     Add Reply
   </button>
 </form>
+
+</div>
 
 <%- include('../partials/footer') %>
