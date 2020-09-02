@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+
+<% if (user.favoriteDriver.some(drivers => {return drivers.id === drivers.id})) { %>
+    <form action="/drivers/<%= drivers._id %>?_method=DELETE" method="POST">
+<% } else { %> 
+    <form action="/drivers/<%= drivers._id %>?_method=PUT" method="POST">
+    <% } %>
+
+    <div class="ui items" id="cards1">
+        <div class="item">
+            <div class="content">
+            <div class="header"><%= drivers.name %></div>
+            <span class="description">
+                <p>Team: <%= drivers.team %></p>
+                <p>Country: <%= drivers.nationality %></p>
+                <p>Height: <%= drivers.height %>cm</p>
+                <p>Weight: <%= drivers.weight %>kg</p>
+                <p>Debut: <%= drivers.debut.toLocaleString().split(',')[0] %></p>
+            </span>
+            </div>
+        </div>
+        <div class="extra">
+        <button class="ui button"><%= user.favoriteDriver.some(drivers => {return drivers.id === drivers.id}) ? "Remove Favorite" : "Favorite" %></button>
+        </div>
+    </div>
+</div>
+</form>
+
+<%- include('../partials/footer') %>
