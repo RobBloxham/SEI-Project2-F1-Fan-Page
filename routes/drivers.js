@@ -3,7 +3,7 @@ const driversCtrl = require('../controllers/drivers')
 
 router.get('/', isLoggedIn, driversCtrl.index)
 router.get('/:id', isLoggedIn, driversCtrl.show)
-router.post('/:id', isLoggedIn, driversCtrl.create)
+// router.post('/:id', isLoggedIn, driversCtrl.create)
 router.put('/:id', isLoggedIn, driversCtrl.addToFavoriteDriver)
 router.delete('/:id', isLoggedIn, driversCtrl.removeFromFavoriteDriver)
 

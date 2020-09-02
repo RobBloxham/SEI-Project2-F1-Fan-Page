@@ -38,14 +38,12 @@ function show(req, res) {
     })
 }
 
-
-
 function index(req, res) {
   Team.find({})
   .then((teams) => {
       res.render("teams/index", {
           user: req.user,
-          teams
+          teams: teams
       })   
   })
   .catch((err) => console.log(err))
