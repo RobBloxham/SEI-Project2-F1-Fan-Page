@@ -3,8 +3,10 @@
 <h3 id="userstitle">Message Board</h3>
 <div class="ui segment" id="cards3">
 <form action="/messages" method="POST">
-  <div class="form-group">
-    <textarea rows="5" cols="50" name="title" placeholder="Create a post..."></textarea>
+  <div class="ui form">
+    <div id="messages" class="field">
+      <label>Create a post</label>
+    <textarea name="title" placeholder="Create a post..."></textarea>
   </div>
   <button type="submit" class="ui green button">Submit Post</button>
 </form>
