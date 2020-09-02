@@ -14,15 +14,15 @@
         <p class="card-text">Alias: <%= userInfo.alias %></p>
         <p class="card-text">Joined: <%= userInfo.createdAt.toLocaleString() %></p>
         <p class="card-text">Email: <a href="mailto:<%= userInfo.email %>"><%= userInfo.email %></a></p>
-        <p class="card-text">Bio: <%= user.bio %></p>
+        <p class="card-text">Bio: <%= userInfo.bio %></p>
         <% favoriteDriver.forEach(d => { %> 
         <p class="card-text">Favorite Driver: <a href="/drivers/<%= d._id %>"><%= d.name %></a>
         <% }) %> 
         <% favoriteTeam.forEach(t => { %> 
         <p class="card-text">Favorite Team: <a href="/teams/<%= t._id %>"><%= t.name %></a> 
         <% }) %> 
-        <p class="card-text">Favorite Track: <%= user.favoriteTrack %></p> 
-        <p class="card-text">About Favorite Track: <%= user.aboutFavoriteTrack %></p> 
+        <p class="card-text">Favorite Track: <%= userInfo.favoriteTrack %></p> 
+        <p class="card-text">About Favorite Track: <%= userInfo.aboutFavoriteTrack %></p> 
     </div>
     </div>
 </div>
