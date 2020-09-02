@@ -1,4 +1,6 @@
 <%- include('../partials/header') %>
+
+<h3 id="userstitle"><%= title %></h3>
 <br><br>
 <div class="ui cards" id="cards">
     <% drivers.forEach(driver => { %>
@@ -13,6 +15,5 @@
         </div>
     <% }) %>
 </div>
-
 
 <%- include('../partials/footer') %>

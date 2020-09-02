@@ -43,7 +43,8 @@ function index(req, res) {
   .then((teams) => {
       res.render("teams/index", {
           user: req.user,
-          teams: teams
+          teams: teams,
+          title: "Teams Index"
       })   
   })
   .catch((err) => console.log(err))
