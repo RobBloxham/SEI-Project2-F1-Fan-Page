@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+<% if (user.favoriteTeam.some(teams => {return teams.id === teams.id})) { %>
+    <form action="/teams/<%= teams._id %>?_method=DELETE" method="POST">
+<% } else { %> 
+    <form action="/teams/<%= teams._id %>?_method=PUT" method="POST">
+<% } %>
+<div class="ui items" id="cards1">
+    <div class="item">
+        <div class="content">
+            <div class="header"><%= teams.name %></div>
+                <span class="description">
+                <p>Location: <%= teams.location %></p>
+                <p>Official website: <a href="<%= teams.url_official %>"> <%= teams.url_official %>  </a></p>
+                <p>Founded in: <%= teams.foundation_year %></p>
+                <p>Car name: <%= teams.car_name %></p>
+                <p>President: <%= teams.president %></p>
+                <p>Sports Director: <%= teams.sports_director %></p>
+                <p>Technical Director: <%= teams.technical_director %></p>
+                </span>
+        </div>
+    </div>
+    <div class="extra content">
+    <button class="ui button"><%= user.favoriteTeam.some(teams => {return teams.id === teams.id}) ? "Remove Favorite" : "Favorite" %></button>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>
