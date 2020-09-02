@@ -2,10 +2,9 @@ const Driver = require('../models/driver')
 const api_key= process.env.API_KEY
 const axios = require('axios')
 
-
 module.exports = {
     index,
-    // create,
+    create,
     show,
     addToFavoriteDriver,
     removeFromFavoriteDriver
@@ -50,19 +49,19 @@ function index(req, res) {
   .catch((err) => console.log(err))
 }
 
-// function create(req, res) {
-//     axios
-//         .get(`https://api.sportradar.us/formula1/trial/v2/en/competitors/${req.params.id}/profile.json?api_key=${api_key}`)
-//         .then((response) => {
-//             Driver.create({
-//             "name": response.data.competitor.name,
-//             "driverId": response.data.competitor.id,
-//             "team": response.data.teams[0].name,
-//             "nationality": response.data.competitor.nationality,
-//             "height": response.data.info.height,
-//             "weight": response.data.info.weight,
-//             "debut": response.data.info.debut
-//             }
-//             )
-//         })
-// }
+function create(req, res) {
+    axios
+        .get(`https://api.sportradar.us/formula1/trial/v2/en/competitors/${req.params.id}/profile.json?api_key=${api_key}`)
+        .then((response) => {
+            Driver.create({
+            "name": response.data.competitor.name,
+            "driverId": response.data.competitor.id,
+            "team": response.data.teams[0].name,
+            "nationality": response.data.competitor.nationality,
+            "height": response.data.info.height,
+            "weight": response.data.info.weight,
+            "debut": response.data.info.debut
+            }
+            )
+        })
+}
