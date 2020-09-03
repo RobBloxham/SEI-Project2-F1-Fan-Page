@@ -4,7 +4,8 @@ module.exports = {
   index,
   create,
   show,
-  reply
+  reply,
+  removeMessage
 }
 
 function reply(req, res) {
@@ -49,4 +50,11 @@ function index(req, res) {
       messages: messages.reverse()
     })
   })
+}
+
+function removeMessage(req, res){
+  Message.findByIdAndDelete(req.params.id)
+  .then ((message) => 
+  res.redirect('/messages')
+  )
 }

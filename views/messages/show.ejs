@@ -4,6 +4,11 @@
 <div class="ui message" id="messagestop">
   <div class="header">
 <h4><%= message.title %></h4>
+<% if (user.name === message.postedBy) { %>
+  <form action="/messages/<%= message.id %>?_method=DELETE" method="POST">
+      <button class="mini ui red button" type="submit">Delete Message</button>
+  </form>
+  <% } %>
 <h5>Posted on <%= message.createdAt.toLocaleString() %> - <%= message.postedBy.split(' ')[0] %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt=""></h5>
 </div>
 <% message.replies.forEach(reply => { %>
