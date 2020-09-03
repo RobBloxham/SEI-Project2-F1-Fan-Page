@@ -1,7 +1,7 @@
 # Project2 F1 Fan Page
 
 ## Description
-F1 fan website with a message board, chatroom, information on drivers, information on teams, and current standings.  Most features are behind google oath.</br>
+F1 fan app/website with a message board, chatroom, information on drivers, information on teams, and current standings.  Most features are behind google oath.</br>
 View the app [here](https://sei-project2-f1-fans.herokuapp.com/)<br/>
 
 ## Visuals
@@ -11,9 +11,9 @@ ERD
 ![lucidchart](https://app.lucidchart.com/documents/view/32d87ee2-1a71-4746-8904-5594eef1ab32/0_0)<br/>
 
 ## User Story/Persona
-Paul is an avid F1 fan, he subscribes to F1 TV to watch the races and uses the F1 website to keep up with the news and races.  However, none of Paul’s close friends or family really care for F1 and he is looking for somewhere he can go to exclusively talk about the sport.  Paul wants to be able to go to the site and select his current favorite driver, team, and track so that other users can see who or what his favorites are in those categories.  Paul would like a message board where people can share messages and reply to keep conversations going.  Paul would also like to have the ability to comment on his favorite track so he can share what he enjoys about it.  </br>
+Paul is an avid F1 fan, he subscribes to F1 TV to watch the races and uses the F1 website to keep up with the news and races.  However, none of Paul’s close friends or family really care for F1 and he is looking for somewhere he can go to exclusively talk about the sport.  Paul wants to be able to go to the app/site and select his current favorite driver, team, and track so that other users can see who or what his favorites are in those categories.  He would like a message board where people can share messages and reply to keep conversations going.  Paul would also like to have the ability to comment on his favorite track so he can share what he enjoys about it.  </br>
 
-##User Experience
+## User Experience
 1. User opens landing page and clicks button for animation and redirect
 2. User can view message board, but all other site functionality is behind google oauth.  A message directs the user to login and recommends they update their profile.
 3. User can click login with google or when attempting to access any other site features will be directed to the google login.  Once logged in the user will be redirected back to the messages page.
@@ -32,9 +32,9 @@ The site is scalablel to mobile devices!<br/>
 "Door, Front, Closing, A.wav" by InspectorJ [www.jshaw.co.uk](www.jshaw.co.uk) of [Freesound.org](Freesound.org)<br/>
 
 ## Technologies Used
-The app was built with a MEN stack. <br/>
+The app was built with MongoDB, Express, and Node stack. <br/>
 It utilizes 2 API's for information sportsradar.com's F1 API for driver and team information and ergast.com's API for current driver and construction standings. <br/>
-As well as Random cats! from theoldreader.com/kittens as placeholder avatar images.
+As well as Random cats! from theoldreader.com/kittens as placeholder avatar images. </br>
 Semantic UI is used for stylizing.<br/>
 
 
