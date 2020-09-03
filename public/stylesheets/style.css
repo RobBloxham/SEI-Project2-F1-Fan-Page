@@ -54,6 +54,8 @@ body{
   padding-right: 50px;
 }
 #standings{
-  max-width: 600px;
-  justify-content: center;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+
 }

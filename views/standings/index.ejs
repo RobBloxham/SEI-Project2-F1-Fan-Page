@@ -1,22 +1,47 @@
 <%- include('../partials/header') %>
-
-<table class="ui red table" id="standings">
+<br>
+<h1 id="standings">Driver Standings</h1>
+<br>
+<div id="standings" >
+<table class="ui red celled table">
     <thead>
-      <tr><th>Food</th>
-      <th>Calories</th>
-      <th>Protein</th>
-    </tr></thead><tbody>
+      <tr><th>Position</th>
+      <th>Driver</th>
+      <th>Constructor</th>
+      <th>Points</th>
+      <th>Wins</th>
+    </tr></thead>
+    <tbody>
       <tr>
-        <td>Apples</td>
-        <td>200</td>
-        <td>0g</td>
+          <% drivers.forEach(r => { %> 
+        <td data-label="Position"><%= r.positionText %></td>
+        <td data-label="Driver"><%= r.Driver.givenName %> <%= r.Driver.familyName %> </td>
+        <td data-label="Constructor"><%= r.Constructors[0].name %></td>
+        <td data-label="Points"><%= r.points %></td>
+        <td data-label="wins"><%= r.wins %></td>
       </tr>
-      <tr>
-        <td>Orange</td>
-        <td>310</td>
-        <td>0g</td>
-      </tr>
+      <% }) %> 
     </tbody>
   </table>
-
+  <br>
+  <h1>Constructor Standings</h1>
+  <table class="ui red celled table">
+    <thead>
+      <tr><th>Position</th>
+      <th>Constructor</th>
+      <th>Points</th>
+      <th>Wins</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+          <% constructors.forEach(r2 => { %> 
+        <td data-label="Position"><%= r2.positionText %></td>
+        <td data-label="Constructor"><%= r2.Constructors[0].name %></td>
+        <td data-label="Points"><%= r2.points %></td>
+        <td data-label="wins"><%= r2.wins %></td>
+      </tr>
+      <% }) %> 
+    </tbody>
+  </table>
+</div>
 <%- include('../partials/footer') %>
