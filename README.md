@@ -31,7 +31,18 @@ Paul is an avid F1 fan, he subscribes to F1 TV to watch the races and uses the F
 "Door, Front, Closing, A.wav" by InspectorJ [www.jshaw.co.uk](www.jshaw.co.uk) of [Freesound.org](Freesound.org)</br>
 
 ## Technologies Used
-The app was built with MongoDB, Express, and Node stack. </br>
+NodeJS</br>
+ExpressJS</br>
+Express Generator</br>
+MongoDB</br>
+MongooseJS</br>
+MongoDB Atlas</br>
+EJS Templating</br>
+Heroku with NodeJS</br>
+Fetch in JS</br>
+Postman API Development</br>
+Google OAuth 2.0</br>
+PassportJS</br>
 It utilizes 2 API's for information sportsradar.com's F1 API for driver and team information and ergast.com's API for current driver and construction standings. </br>
 As well as Random cats! from theoldreader.com/kittens as placeholder avatar images. </br>
 Semantic UI is used for stylizing.</br>
