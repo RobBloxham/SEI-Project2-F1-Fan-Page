@@ -13,8 +13,6 @@ function index(req, res){
     axios
         .all([requestOne, requestTwo])
         .then(axios.spread((...responses) => {
-            const drivers = responses[0]
-            const constructors = responses[1]
             res.render("standings/index", {
             user: req.user,
             drivers: responses[0].data.MRData.StandingsTable.StandingsLists[0].DriverStandings,
