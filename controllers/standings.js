@@ -18,7 +18,7 @@ function index(req, res){
             res.render("standings/index", {
             user: req.user,
             drivers: responses[0].data.MRData.StandingsTable.StandingsLists[0].DriverStandings,
-            constructors: responses[1].data.MRData.StandingsTable.StandingsLists[0].ConsturctorStandings
+            constructors: responses[1].data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings
             })
         }))
         .catch(err => console.log(err))

@@ -18,7 +18,7 @@
         <td data-label="Driver"><%= r.Driver.givenName %> <%= r.Driver.familyName %> </td>
         <td data-label="Constructor"><%= r.Constructors[0].name %></td>
         <td data-label="Points"><%= r.points %></td>
-        <td data-label="wins"><%= r.wins %></td>
+        <td data-label="Wins"><%= r.wins %></td>
       </tr>
       <% }) %> 
     </tbody>
@@ -35,13 +35,15 @@
     <tbody>
       <tr>
           <% constructors.forEach(r2 => { %> 
-        <td data-label="Position"><%= r2.positionText %></td>
-        <td data-label="Constructor"><%= r2.Constructors[0].name %></td>
-        <td data-label="Points"><%= r2.points %></td>
-        <td data-label="wins"><%= r2.wins %></td>
+        <td data-label="Constructor Position"><%= r2.positionText %></td>
+        <td data-label="Constructor Constructor"><%= r2.constructor.name %></td>
+        <td data-label="Constructor Points"><%= r2.points %></td>
+        <td data-label="Constructor Wins"><%= r2.wins %></td>
       </tr>
       <% }) %> 
     </tbody>
   </table>
+  </div>
 </div>
+<br><br>
 <%- include('../partials/footer') %>

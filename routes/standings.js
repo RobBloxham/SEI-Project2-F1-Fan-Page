@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const standingsCtrl = require("../controllers/standings");
 
-router.get('/',  standingsCtrl.index);
+router.get('/', isLoggedIn, standingsCtrl.index);
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();
