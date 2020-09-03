@@ -33,6 +33,8 @@ Paul is an avid F1 fan, he subscribes to F1 TV to watch the races and uses the F
 ## Contributing
 "Door, Front, Opening, A.wav" by InspectorJ [www.jshaw.co.uk](www.jshaw.co.uk) of [Freesound.org](Freesound.org)</br>
 "Door, Front, Closing, A.wav" by InspectorJ [www.jshaw.co.uk](www.jshaw.co.uk) of [Freesound.org](Freesound.org)</br>
+404 animation thanks to Kieran Hunter [codepen](https://codepen.io/kieranfivestars/pen/MYdQxX)</br>
+404 car image via [Pinclipart](https://www.pinclipart.com/pindetail/bTTmwb_car-wheel-clipart-side-view-race-car-icon/)</br>
 
 ## Technologies Used
 NodeJS</br>
