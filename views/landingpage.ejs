@@ -27,6 +27,9 @@
         img {
           width: 50%;
           height: auto;
+        }
+        #lights{
+          display: none;
         }       
 
       </style>
@@ -34,8 +37,10 @@
 <body>
   <br><br><br>
     <h1>F1 FAN PAGE</h1>
-    <img id="lights" src="/images/LightsOut.gif" style="display:none"/>
     <button class="ui green button" id="startBtn">Enter Page</button>
+    <div id="lights">
+      <img src="/images/LightsOut.gif"/>
+    </div>
     <script src="/javascripts/landingpage.js"></script>
 </body>
 </html>

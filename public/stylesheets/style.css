@@ -53,3 +53,7 @@ body{
   padding-left: 50px;
   padding-right: 50px;
 }
+#standings{
+  max-width: 600px;
+  justify-content: center;
+}
