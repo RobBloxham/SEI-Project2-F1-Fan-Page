@@ -4,7 +4,7 @@
 <div class="ui message" id="messagestop">
   <div class="header">
 <h4><%= message.title %></h4>
-<h5>Posted on <%= message.createdAt.toLocaleString() %> - <%= message.postedBy %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt=""></h5>
+<h5>Posted on <%= message.createdAt.toLocaleString() %> - <%= message.postedBy.split(' ')[0] %> <img id="avatarPhoto" width="30" src="<%= message.avatar %>" alt=""></h5>
 </div>
 <% message.replies.forEach(reply => { %>
   <div class="ui comments">
@@ -13,7 +13,7 @@
         <img src="<%= reply.avatar %>">
       </a>
       <div class="content">
-        <p class="author"><%= reply.postedBy %></p>
+        <p class="author"><%= reply.postedBy.split(' ')[0] %></p>
         <p><%= reply.message %></p>
       </div>
     </div>

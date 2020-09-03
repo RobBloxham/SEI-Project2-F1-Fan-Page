@@ -8,12 +8,11 @@
     </div>
     <div class="content">
     <div class="header">
-    <h3><%= userInfo.name %></h3>
+    <h3><%= userInfo.name.split(' ')[0] %></h3>
     </div>
     <div class="description">
         <p class="card-text">Alias: <%= userInfo.alias %></p>
         <p class="card-text">Joined: <%= userInfo.createdAt.toLocaleString() %></p>
-        <p class="card-text">Email: <a href="mailto:<%= userInfo.email %>"><%= userInfo.email %></a></p>
         <p class="card-text">Bio: <%= userInfo.bio %></p>
         <% favoriteDriver.forEach(d => { %> 
         <p class="card-text">Favorite Driver: <a href="/drivers/<%= d._id %>"><%= d.name %></a>

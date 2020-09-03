@@ -16,7 +16,7 @@
     <p id="isTyping"></p>
     <div id="chatroom"></div>
     <% chats.forEach(c => { %>
-    <p id="chats"><img id="avatarPhoto" height="30" src="<%= c.avatar %>" alt=""> <%= c.username %>: <%= c.message %> - (<%= c.createdAt.toLocaleString() %>)</p>
+    <p id="chats"><img id="avatarPhoto" height="30" src="<%= c.avatar %>" alt=""> <%= c.username.split(' ')[0] %>: <%= c.message %> - (<%= c.createdAt.toLocaleString() %>)</p>
     <% }) %> 
 </div>
 

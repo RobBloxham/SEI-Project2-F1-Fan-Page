@@ -16,7 +16,7 @@
   <div class="ui relaxed divided list" id="cards3">
     <div class="item">
       <div class="content">
-      <p class="header"><%= message.postedBy %></p>
+      <p class="header"><%= message.postedBy.split(' ')[0] %></p>
       <h5 class="card-title"><%= message.title %></h5>
       <div class="description"><%= message.createdAt.toLocaleString()%></div>
       </div>

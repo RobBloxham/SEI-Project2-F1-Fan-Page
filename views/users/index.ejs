@@ -9,7 +9,7 @@
       <img src="<%= u.avatar ? u.avatar : 'http://theoldreader.com/kittens/300/300/' %>" height="200px" alt="">
     </div>
     <div class="content">
-      <div class="header"><%= u.name %></div>
+      <div class="header"><%= u.name.split(' ')[0] %></div>
       <div class="meta">
         <a id="userlink" href="/users/<%= u._id %>">click here to check out my profile</a>
       </div>
