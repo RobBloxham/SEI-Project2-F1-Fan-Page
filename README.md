@@ -8,7 +8,7 @@ View the app [here](https://sei-project2-f1-fans.herokuapp.com/)</br>
 Wireframe
 ![Trello Attachment](https://trello-attachments.s3.amazonaws.com/5f46c567a9af48168aa00564/5f47e53f78226f37255f4214/0e5da879f16402718adb8d7de20689e7/Screen_Shot_2020-08-27_at_5.09.40_PM.png)</br>
 ERD
-![lucidchart](https://trello-attachments.s3.amazonaws.com/5f46c567a9af48168aa00564/5f47e019dff4fa795b50dd2e/5539dd31b3036cf6a185be9c62d2decc/SEI-Project2-F1_(1).png</br>
+![lucidchart](https://trello-attachments.s3.amazonaws.com/5f46c567a9af48168aa00564/5f47e019dff4fa795b50dd2e/5539dd31b3036cf6a185be9c62d2decc/SEI-Project2-F1_(1).png)</br>
 
 ## User Story/Persona
 Paul is an avid F1 fan, he subscribes to F1 TV to watch the races and uses the F1 website to keep up with the news and races.  However, none of Paul’s close friends or family really care for F1 and he is looking for somewhere he can go to exclusively talk about the sport.  Paul wants to be able to go to the app/site and select his current favorite driver, team, and track so that other users can see who or what his favorites are in those categories.  He would like a message board where people can share messages and reply to keep conversations going.  Paul would also like to have the ability to comment on his favorite track so he can share what he enjoys about it.  </br>
@@ -23,7 +23,7 @@ Paul is an avid F1 fan, he subscribes to F1 TV to watch the races and uses the F
 7. Logged in user can view the current F1 Drivers index, click on about driver and see more driver details. On the details page they can click a button to add or remove the driver as their favorite,
 8. Logged in user can view the current F1 Teams index, click on an about team and see more team details.  On the details page they can also click a button to add or remove the team as their favorite.
 9. User can view current F1 standings, this page makes an API call to retrieve the latest information.
-10. User can log out by clicking LogOut<</br>
+10. User can log out by clicking LogOut</br>
 
 
 ## Contributing
