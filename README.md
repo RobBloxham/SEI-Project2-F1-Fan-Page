@@ -9,6 +9,10 @@ Wireframe
 ![Trello Attachment](https://trello-attachments.s3.amazonaws.com/5f46c567a9af48168aa00564/5f47e53f78226f37255f4214/0e5da879f16402718adb8d7de20689e7/Screen_Shot_2020-08-27_at_5.09.40_PM.png)</br>
 ERD
 ![lucidchart](https://trello-attachments.s3.amazonaws.com/5f46c567a9af48168aa00564/5f47e019dff4fa795b50dd2e/5539dd31b3036cf6a185be9c62d2decc/SEI-Project2-F1_(1).png)</br>
+Screen shots
+![Trello Attachment](https://trello-attachments.s3.amazonaws.com/5f514f9195347850891c7d4b/990x716/37598f694a47c712546075b9cb102bf1/screenshot.png)</br>
+![Trello Attachment](https://trello-attachments.s3.amazonaws.com/5f46c567a9af48168aa00564/5f514f9195347850891c7d4b/2c0b87f939777752d72fd950ad0ca2dd/Screen_Shot_2020-09-03_at_1.16.28_PM.png)</br>
+![Trello Attachment](https://trello-attachments.s3.amazonaws.com/5f46c567a9af48168aa00564/5f514f9195347850891c7d4b/f6f0e1464faa41fb06035014eff7323b/Screen_Shot_2020-09-03_at_1.16.01_PM.png)</br>
 
 ## User Story/Persona
 Paul is an avid F1 fan, he subscribes to F1 TV to watch the races and uses the F1 website to keep up with the news and races.  However, none of Paul’s close friends or family really care for F1 and he is looking for somewhere he can go to exclusively talk about the sport.  Paul wants to be able to go to the app/site and select his current favorite driver, team, and track so that other users can see who or what his favorites are in those categories.  He would like a message board where people can share messages and reply to keep conversations going.  Paul would also like to have the ability to comment on his favorite track so he can share what he enjoys about it.  </br>
