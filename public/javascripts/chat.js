@@ -67,7 +67,7 @@ message.addEventListener("keypress", (e) => {
     isTyping.innerText = "";
     messageAudio.play();
     let newMessage = document.createElement("p");
-    newMessage.innerHTML = `<p><img id="avatarPhoto" height="30" src="${data.avatar}" alt=""> ${data.username}: ${data.message}</p>`;
+    newMessage.innerHTML = `<p><img id="avatarPhoto" height="30" src="${data.avatar}" alt=""> ${data.username.split(' ')[0].toString()}: ${data.message}</p>`;
     chatroom.prepend(newMessage);
     fetch("/chatroom", {
       method: "POST",

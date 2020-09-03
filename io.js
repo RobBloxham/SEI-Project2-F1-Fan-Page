@@ -5,7 +5,7 @@ let chatters = {}
 io.on('connection', (socket) => {
 
 socket.on('register-user', (username)=> {
-  chatters[socket.id] = username
+  chatters[socket.id] = username.split(' ')[0]
   io.emit('update-chatter-list', Object.keys(chatters).map(id => chatters[id]))
   io.emit('user-enter')
 })
@@ -20,7 +20,7 @@ socket.on('new_message', (data) => {
 })
 
 socket.on('typing', (data) => {
-  socket.broadcast.emit('typing', {username: data.username})
+  socket.broadcast.emit('typing', {username: data.username.split(' ')[0]})
 })
   
 })
