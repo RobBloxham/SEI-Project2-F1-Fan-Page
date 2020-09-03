@@ -61,4 +61,13 @@ body{
 
 #welcome{
   text-align: center;
+  background-color: rgba(84, 84, 84, 0.415) !important;
+}
+
+#textarea{
+  background-color: rgba(231, 231, 231, 0.936) !important;
+}
+
+#cardsback{
+  background-color: rgba(255, 254, 254, 0.614) !important;
 }
