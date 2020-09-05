@@ -5,6 +5,8 @@ F1 fan app/website with a message board, chatroom, information on drivers, infor
 View the app [here](https://sei-project2-f1-fans.herokuapp.com/)</br>
 
 ## Visuals
+Trello Board
+[trello](https://trello.com/b/qAnhxNgY/project-2-f1-fans)
 Wireframe
 ![Trello Attachment](https://trello-attachments.s3.amazonaws.com/5f46c567a9af48168aa00564/5f47e53f78226f37255f4214/0e5da879f16402718adb8d7de20689e7/Screen_Shot_2020-08-27_at_5.09.40_PM.png)</br>
 ERD
